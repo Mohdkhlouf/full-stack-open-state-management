@@ -11,7 +11,7 @@ const Statistics = () => {
 
   return (
     <div>
-      <h2>statistics</h2>
+      <h2>Statistics</h2>
       <table>
         <tbody>
           <tr><td>good</td><td>{good}</td></tr>
