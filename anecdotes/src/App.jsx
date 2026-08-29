@@ -1,4 +1,5 @@
 import { useAnecdotes, useVotesIncrement } from "./store"
+import AnectdotForm from "./components/AnecdoteForm"
 
 const App = () => {
 
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <div>
       <h2>Anecdotes</h2>
+      <AnectdotForm />
       {anecdotes.map((anecdote) => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
@@ -18,13 +20,7 @@ const App = () => {
           </div>
         </div>
       ))}
-      <h2>create new</h2>
-      <form>
-        <div>
-          <input data-testid="new" />
-        </div>
-        <button>create</button>
-      </form>
+
     </div>
   )
 }
