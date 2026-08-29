@@ -1,6 +1,6 @@
 import { useAddAnecdote } from '../store'
 
-const AnectdotForm = () => {
+const AnecdoteForm = () => {
   const getId = () => (100000 * Math.random()).toFixed(0)
   const AddAnecdote = useAddAnecdote()
 
@@ -27,4 +27,4 @@ const AnectdotForm = () => {
   )
 }
 
-export default AnectdotForm
+export default AnecdoteForm

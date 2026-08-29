@@ -1,26 +1,13 @@
-import { useAnecdotes, useVotesIncrement } from "./store"
-import AnectdotForm from "./components/AnecdoteForm"
+
+import AnecdoteForm from "./components/AnecdoteForm"
+import AnecdoteList from "./components/AnecdoteList"
 
 const App = () => {
-
-  const anecdotes = useAnecdotes()
-  const vote = useVotesIncrement()
-
-
   return (
     <div>
       <h2>Anecdotes</h2>
-      <AnectdotForm />
-      {anecdotes.map((anecdote) => (
-        <div key={anecdote.id}>
-          <div>{anecdote.content}</div>
-          <div>
-            has {anecdote.votes}
-            <button onClick={() => vote(anecdote.id)}>vote</button>
-          </div>
-        </div>
-      ))}
-
+      <AnecdoteList />
+      <AnecdoteForm />
     </div>
   )
 }
