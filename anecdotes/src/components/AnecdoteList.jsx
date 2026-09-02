@@ -1,4 +1,4 @@
-import { useAnecdotes, useVotesIncrement } from "../store"
+import { useAnecdotes, useAnecdoteActions } from "../store"
 
 
 
@@ -8,7 +8,7 @@ const AnecdoteList = () => {
   const anecdotes = useAnecdotes()
   const sortedAnecdotes = anecdotes.toSorted((a, b) => b.votes - a.votes)
 
-  const vote = useVotesIncrement()
+  const {votesIncrement} = useAnecdoteActions()
 
   return (
     <div>
@@ -19,7 +19,7 @@ const AnecdoteList = () => {
           <div>{anecdote.content}</div>
           <div>
             has {anecdote.votes}
-            <button onClick={() => vote(anecdote.id)}>vote</button>
+            <button onClick={() => votesIncrement(anecdote.id)}>vote</button>
           </div>
         </div>
       ))}

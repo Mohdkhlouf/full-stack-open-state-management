@@ -1,5 +1,6 @@
 
 import { create } from 'zustand'
+import { useShallow } from 'zustand/react/shallow'
 
 const anecdotesAtStart = [
   'If it hurts, do it more often',
@@ -20,15 +21,25 @@ const asObject = anecdote => ({
 
 const useAnecdoteStore = create((set) => ({
   anecdotes: anecdotesAtStart.map(asObject),
+  filter: '',
   actions: {
-    votesInvrement: (id) => set(state => ({
-      anecdotes:state.anecdotes.map(anecdote => anecdote.id === id ? { ...anecdote, votes: anecdote.votes + 1 } : anecdote)
-    }))
-  },
-  addAnecdote: (anecdote) => set(state => ({
-    anecdotes : state.anecdotes.concat(anecdote)
-   }))}))
+    votesIncrement: (id) => set(state => ({
+      anecdotes: state.anecdotes.map(anecdote => anecdote.id === id ? { ...anecdote, votes: anecdote.votes + 1 } : anecdote)
+    })),
+    addAnecdote: (anecdote) => set(state => ({
+      anecdotes: state.anecdotes.concat(anecdote)
+    })),
+    setFilter: (filter) => set(() => ({ filter }))
+  }
+}))
 
-export const useAnecdotes = () => useAnecdoteStore((state) => state.anecdotes)
-export const useVotesIncrement = () => useAnecdoteStore( state => state.actions.votesInvrement)
-export const useAddAnecdote = () => useAnecdoteStore(state => state.addAnecdote)
+
+
+export const useAnecdotes = () => useAnecdoteStore(useShallow((state) => {
+  return state.filter
+  ? state.anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(state.filter.toLowerCase()))
+  : state.anecdotes
+
+}))
+export const useFilter = () => useAnecdoteStore((state) => state.filter)
+export const useAnecdoteActions = () => useAnecdoteStore( state => state.actions)

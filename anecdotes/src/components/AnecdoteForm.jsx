@@ -1,8 +1,8 @@
-import { useAddAnecdote } from '../store'
+import { useAnecdoteActions } from '../store'
 
 const AnecdoteForm = () => {
   const getId = () => (100000 * Math.random()).toFixed(0)
-  const AddAnecdote = useAddAnecdote()
+  const { addAnecdote } = useAnecdoteActions()
 
 
   const addNote = (e) => {
@@ -12,7 +12,7 @@ const AnecdoteForm = () => {
       id : getId(),
       votes : 0
     }
-     AddAnecdote(note)
+     addAnecdote(note)
     e.target.reset()
   }
 
