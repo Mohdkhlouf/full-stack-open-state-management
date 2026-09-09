@@ -11,5 +11,17 @@ const getAll = async () => {
   return data
 }
 
+const createAnecdote = async (anecdote,) => {
+  const response = await fetch(baseUrl, {
+    method: 'POST',
+    headers: {'Content-Type':'apapplication/json'},
+    body: JSON.stringify(anecdote)
+  })
 
-export default {getAll}
+  if (!response.ok) throw new Error('Faild to add anecdote')
+
+  return await response.json()
+}
+
+
+export default {getAll,createAnecdote}

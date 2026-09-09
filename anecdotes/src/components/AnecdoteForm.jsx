@@ -1,4 +1,5 @@
 import { useAnecdoteActions } from '../store'
+import anecdoteService from '../services/anecdotes'
 
 const AnecdoteForm = () => {
   const getId = () => (100000 * Math.random()).toFixed(0)
@@ -12,7 +13,8 @@ const AnecdoteForm = () => {
       id : getId(),
       votes : 0
     }
-     addAnecdote(note)
+    anecdoteService.createAnecdote(note)
+    addAnecdote(note)
     e.target.reset()
   }
 
