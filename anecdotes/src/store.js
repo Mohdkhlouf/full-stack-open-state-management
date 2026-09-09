@@ -16,9 +16,12 @@ const useAnecdoteStore = create((set,get) => ({
       set(state => ({
         anecdotes: state.anecdotes.map(anecdote => anecdote.id === id ? updated : anecdote)
       })      )},
-    addAnecdote: (anecdote) => set(state => ({
-      anecdotes: state.anecdotes.concat(anecdote)
-    })),
+    addAnecdote: async (note) => {
+      const newAnecdote = await anecdotesService.createAnecdote(note)
+      set(state => ({
+        anecdotes: state.anecdotes.concat(newAnecdote)
+      }))
+    },
     setFilter: (filter) => set(() => ({ filter })),
     setNotification: (notification) => {
       if (leftTime) clearTimeout(leftTime)
