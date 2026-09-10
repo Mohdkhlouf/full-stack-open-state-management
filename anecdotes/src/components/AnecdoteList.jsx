@@ -14,7 +14,6 @@ const AnecdoteList = () => {
   return (
     <div>
       <Notification message={notification} />
-      <h2>Anecdotes</h2>
       {sortedAnecdotes.map((anecdote) => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
@@ -23,7 +22,7 @@ const AnecdoteList = () => {
             <button onClick={
               () => {
                 votesIncrement(anecdote.id)
-                setNotification(`you voted ${anecdote.content}`)
+                setNotification(`you voted '${anecdote.content}'`)
               }
             }>vote</button>
             {anecdote.votes === 0 ? <button onClick={()=> deleteAnecdote(anecdote.id)} >Delete</button> : null}

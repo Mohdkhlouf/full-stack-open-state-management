@@ -13,7 +13,7 @@ const AnecdoteForm = () => {
       votes : 0
     }
     await addAnecdote(note)
-    setNotification(`you created ${note.content}`)
+    setNotification(`you created '${note.content}'`)
     e.target.reset()
   }
 

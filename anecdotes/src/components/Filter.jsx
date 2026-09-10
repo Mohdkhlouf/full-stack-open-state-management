@@ -12,7 +12,7 @@ const Filter = () => {
 
     <div>
       <label htmlFor="filter"/> {'filter '}
-      <input type="text" name="filter" onChange={(e) => filterText(e) } />
+      <input type="text" data-testid="filter" name="filter" onChange={(e) => filterText(e) } />
     </div>
   )
 }
