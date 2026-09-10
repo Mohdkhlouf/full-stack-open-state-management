@@ -30,11 +30,16 @@ const useAnecdoteStore = create((set,get) => ({
       leftTime = setTimeout(() => {
           set(() => ({ notification: '' }))
         }, 5000)
-
     },
     initilize: async () => {
       const anecdotes = await anecdotesService.getAll()
       set({ anecdotes })
+    },
+    deleteAnecdote: async (id) => {
+      await anecdotesService.deleteAnecdote(id)
+      set(state => ({
+        anecdotes: state.anecdotes.filter(anecdote => anecdote.id !== id)
+      }))
     }
   }
 }))
