@@ -32,7 +32,7 @@ const useAnecdoteStore = create(devtools((set,get) => ({
           set(() => ({ notification: '' }))
         }, 5000)
     },
-    initialize: async () => {
+    initilize: async () => {
       const anecdotes = await anecdotesService.getAll()
       set({ anecdotes })
     },

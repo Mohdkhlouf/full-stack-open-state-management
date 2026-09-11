@@ -27,7 +27,7 @@ beforeEach(() => {
 })
 
 describe('anecdoteStore', () => {
-  it('initialize loads anecdotes from service', async () => {
+  it('initilize loads anecdotes from service', async () => {
       const mockAnecdotes = [
         { id: '1', content: 'test anecdote 1', votes: 0 },
         { id: '2', content: 'test anecdote 2', votes: 0 },
@@ -35,7 +35,7 @@ describe('anecdoteStore', () => {
       anecdoteService.getAll.mockResolvedValue(mockAnecdotes)
       const { result } = renderHook(() => useAnecdoteActions())
       await act(async () => {
-        await result.current.initialize()
+        await result.current.initilize()
       })
       const { result: anecdotesResult } = renderHook(() => useAnecdotes())
       expect(anecdotesResult.current).toEqual(mockAnecdotes)
@@ -101,4 +101,3 @@ describe('voting', () => {
     expect(updated.votes).toBe(4)
   })
 })
-
