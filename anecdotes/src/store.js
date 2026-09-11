@@ -2,10 +2,11 @@
 import { create } from 'zustand'
 import { useShallow } from 'zustand/react/shallow'
 import anecdotesService from "./services/anecdotes"
+import { devtools } from 'zustand/middleware'
 
 let leftTime = null
 
-const useAnecdoteStore = create((set,get) => ({
+const useAnecdoteStore = create(devtools((set,get) => ({
   anecdotes: [],
   filter: '',
   notification:'',
@@ -31,7 +32,7 @@ const useAnecdoteStore = create((set,get) => ({
           set(() => ({ notification: '' }))
         }, 5000)
     },
-    initilize: async () => {
+    initialize: async () => {
       const anecdotes = await anecdotesService.getAll()
       set({ anecdotes })
     },
@@ -42,18 +43,21 @@ const useAnecdoteStore = create((set,get) => ({
       }))
     }
   }
-}))
+})))
 
 
 
 export const useAnecdotes = () => useAnecdoteStore(useShallow((state) => {
-  return state.filter
-  ? state.anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(state.filter.toLowerCase()))
-  : state.anecdotes
-
+  const filtered = state.filter
+    ? state.anecdotes.filter(a => a.content.toLowerCase().includes(state.filter.toLowerCase()))
+    : state.anecdotes
+  return filtered.toSorted((a, b) => b.votes - a.votes)
 }))
+
 export const useFilter = () => useAnecdoteStore((state) => {
   return state.filter
 })
 export const useNotication = () => useAnecdoteStore((state) => state.notification)
 export const useAnecdoteActions = () => useAnecdoteStore( state => state.actions)
+
+ export default useAnecdoteStore

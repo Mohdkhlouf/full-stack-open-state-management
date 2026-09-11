@@ -6,7 +6,6 @@ import Notification from "./Notification"
 const AnecdoteList = () => {
 
   const anecdotes = useAnecdotes()
-  const sortedAnecdotes = anecdotes.toSorted((a, b) => b.votes - a.votes)
   const notification = useNotication()
 
   const { votesIncrement, deleteAnecdote,  setNotification} = useAnecdoteActions()
@@ -14,7 +13,7 @@ const AnecdoteList = () => {
   return (
     <div>
       <Notification message={notification} />
-      {sortedAnecdotes.map((anecdote) => (
+      {anecdotes.map((anecdote) => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
           <div>
