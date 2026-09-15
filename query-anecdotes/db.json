@@ -3,7 +3,7 @@
     {
       "id": "c0515ce8-0990-4800-8dc5-c7542dc9c035",
       "content": "Make it work, then make it fast",
-      "votes": 7
+      "votes": 9
     },
     {
       "id": "8ad961d1-9510-492b-be8e-cac5eb60f361",
@@ -54,6 +54,11 @@
       "content": "add new note55889985",
       "votes": 0,
       "id": "247175c6-15fe-430f-98ab-c028ef772ceb"
+    },
+    {
+      "content": "asdasdasdasd",
+      "votes": 0,
+      "id": "b6f3a363-4e7f-4e13-afed-e4d76ec701c6"
     }
   ]
 }
