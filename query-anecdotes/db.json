@@ -1,69 +1,29 @@
 {
   "anecdotes": [
     {
-      "id": "c0515ce8-0990-4800-8dc5-c7542dc9c035",
+      "id": "f5c0e6c8-a7fa-4aad-aa35-52e78dd2bf7c",
       "content": "Make it work, then make it fast",
-      "votes": 9
+      "votes": 0
     },
     {
-      "id": "8ad961d1-9510-492b-be8e-cac5eb60f361",
+      "id": "bf73e319-4653-4bb6-ac06-dbc2f84b6395",
       "content": "There are two hard things in computer science",
+      "votes": 3
+    },
+    {
+      "id": "86c696b0-485b-457e-8647-797b17b54835",
+      "content": "Untested code is broken code",
+      "votes": 3
+    },
+    {
+      "id": "ed01ccbd-270d-4a2a-aea5-095cc6273858",
+      "content": "Simplicity is the ultimate sophistication",
       "votes": 5
     },
     {
-      "id": "42ed45e8-bdaa-49de-958c-7e932ad3f39f",
-      "content": "Untested code is broken code",
-      "votes": 9
-    },
-    {
-      "id": "de6531f8-ccfe-433f-b375-8556491dc638",
-      "content": "Simplicity is the ultimate sophistication",
-      "votes": 10
-    },
-    {
-      "id": "f9f4b51b-d18a-41c0-af9b-c69b420d8e6d",
+      "id": "38ecc72f-2e84-4d69-b2ae-7376bc1d37c9",
       "content": "Real artists ship code",
       "votes": 7
-    },
-    {
-      "content": "add new note",
-      "votes": 3,
-      "id": "331de3e0-9610-48c1-beed-d44ee9315fec"
-    },
-    {
-      "content": "czxcfgg",
-      "votes": 4,
-      "id": "77136170-a23d-434e-9781-acdb3c6a6e72"
-    },
-    {
-      "content": "asdasdasdasd",
-      "votes": 9,
-      "id": "19ce8ecf-e7ed-46c9-a8fd-c095ba538313"
-    },
-    {
-      "content": "create new anectdodododd ",
-      "votes": 0,
-      "id": "8ad8d5a7-8a57-4587-a670-3b3e70f733cb"
-    },
-    {
-      "content": "There are two hard 4564654654654654",
-      "votes": 1,
-      "id": "1c378e78-5e6d-4e38-b43c-1e29244b59b1"
-    },
-    {
-      "content": "add new note55889985",
-      "votes": 0,
-      "id": "247175c6-15fe-430f-98ab-c028ef772ceb"
-    },
-    {
-      "content": "asdasdasdasd",
-      "votes": 0,
-      "id": "b6f3a363-4e7f-4e13-afed-e4d76ec701c6"
-    },
-    {
-      "content": "zxczxc asdasd a dasd asd",
-      "votes": 0,
-      "id": "3b2c4e21-e2ba-47d2-aa08-d0863d4e95fb"
     }
   ]
 }

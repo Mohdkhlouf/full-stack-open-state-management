@@ -10,7 +10,7 @@ export const getAnecdotes = async () => {
 export const addAnecdote = async (anecdote) => {
 
   if (anecdote.content.length < 5)
-    throw new Error('anecdote size must be more than 5 letters')
+    throw new Error('too short anecdote size must be more than 5 letters')
 
   const options = {
     method: 'POST',
