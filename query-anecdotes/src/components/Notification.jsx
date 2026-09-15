@@ -8,7 +8,9 @@ const Notification = () => {
 
   if (true) return null
 
-  return <div data-testid="notification" style={style}></div>
+  return <div data-testid="notification" style={style}>
+
+  </div>
 }
 
 export default Notification
