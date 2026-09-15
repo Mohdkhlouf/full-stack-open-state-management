@@ -1,9 +1,9 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { addAnecdote, getAnecdotes, updateAnecdote } from '../requests'
-import useNotification from './useNotification'
+import useNotify from './useNotify'
 
 export const useAnecdotes = () => {
-  const { newNotification } = useNotification()
+  const { newNotification } = useNotify()
 
   const queryClient = useQueryClient()
 

@@ -1,8 +1,8 @@
-import useNotification from '../hooks/useNotification'
+import useNotify from '../hooks/useNotify'
 
 
 const AnecdoteForm = ({ addAnecdote }) => {
-  const { newNotification } = useNotification()
+  const { newNotification } = useNotify()
 
   const onCreate = (event) => {
     event.preventDefault()

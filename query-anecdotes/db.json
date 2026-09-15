@@ -47,7 +47,7 @@
     },
     {
       "content": "There are two hard 4564654654654654",
-      "votes": 0,
+      "votes": 1,
       "id": "1c378e78-5e6d-4e38-b43c-1e29244b59b1"
     },
     {
@@ -59,6 +59,11 @@
       "content": "asdasdasdasd",
       "votes": 0,
       "id": "b6f3a363-4e7f-4e13-afed-e4d76ec701c6"
+    },
+    {
+      "content": "zxczxc asdasd a dasd asd",
+      "votes": 0,
+      "id": "3b2c4e21-e2ba-47d2-aa08-d0863d4e95fb"
     }
   ]
 }
