@@ -14,7 +14,7 @@ const Notification = () => {
   if (notification === '') return null
 
   return <div data-testid="notification" style={style}>
-    {`anecdote '${notification}' voted`}
+    {notification}
   </div>
 }
 

@@ -9,7 +9,7 @@ const {anecdotes, isPending,isError, addAnecdote,increseVoting } = useAnecdotes(
 
 const handleVote = (anecdote) => {
   increseVoting(anecdote)
-  newNotification(anecdote.content)
+  newNotification(`anecdote '${anecdote.content}' voted`)
   }
 
   if (isPending) {
