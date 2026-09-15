@@ -1,49 +1,29 @@
 {
   "anecdotes": [
     {
-      "content": "If it hurts, do it more often",
-      "id": "47145",
-      "votes": 4
-    },
-    {
-      "content": "Adding manpower to a late software project makes it later!",
-      "id": "21149",
-      "votes": 5
-    },
-    {
-      "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
-      "id": "69581",
+      "id": "c0515ce8-0990-4800-8dc5-c7542dc9c035",
+      "content": "Make it work, then make it fast",
       "votes": 0
     },
     {
-      "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      "id": "36975",
+      "id": "8ad961d1-9510-492b-be8e-cac5eb60f361",
+      "content": "There are two hard things in computer science",
+      "votes": 3
+    },
+    {
+      "id": "42ed45e8-bdaa-49de-958c-7e932ad3f39f",
+      "content": "Untested code is broken code",
       "votes": 4
     },
     {
-      "content": "Premature optimization is the root of all evil.",
-      "id": "25170",
-      "votes": 6
+      "id": "de6531f8-ccfe-433f-b375-8556491dc638",
+      "content": "Simplicity is the ultimate sophistication",
+      "votes": 5
     },
     {
-      "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
-      "id": "98312",
-      "votes": 8
-    },
-    {
-      "content": "add new note",
-      "votes": 6,
-      "id": "f0874ef1-ba59-4126-8602-d0bfc603b3fb"
-    },
-    {
-      "content": "dfdfg dfg dfg dfg",
-      "votes": 3,
-      "id": "ed31ebc7-a1b4-4095-975b-da30a688ef71"
-    },
-    {
-      "content": "asdasdds ",
-      "votes": 4,
-      "id": "42fb272d-9ec3-4204-85ef-84884922a3de"
+      "id": "f9f4b51b-d18a-41c0-af9b-c69b420d8e6d",
+      "content": "Real artists ship code",
+      "votes": 7
     }
   ]
 }
